@@ -39,6 +39,14 @@ func ParseCandidate(candidate string) []Candidate {
           candidates = append(candidates, Candidate{ip, candidate})
         }
       }
+    } else {
+      // Couldn't parse as interface name.  Try it as a hostname.
+      ips, err := net.LookupIP(candidate)
+      if err == nil {
+        for _, ip := range ips {
+          candidates = append(candidates, Candidate{ip, candidate})
+        }
+      }
     }
   }
   return candidates
