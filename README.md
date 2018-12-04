@@ -74,12 +74,16 @@ amazonaws.com	72.21.206.80	catch-all
 amazonaws.com	72.21.210.29	catch-all
 ```
 
-Building for Linux
+Building in general
 ==================
 
 Assumes you've got docker handy.
 
 ```
-./build
+make clean
+make build
 ```
 
+You'll get linux and mac versions of the binary.
+
+If you're building within a docker container already, use `make build-native`.

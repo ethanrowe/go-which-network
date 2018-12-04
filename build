@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cd $(dirname $0)
-
-docker run --rm -t -v $(pwd):/go/src/github.com/ethanrowe/which-network -w /go/src/github.com/ethanrowe/which-network golang:1.10 \
-  go build -o which-network .
-

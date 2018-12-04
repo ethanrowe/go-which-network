@@ -13,4 +13,6 @@
 
 # The utility itself, post-build
 which-network
+which-network-linux
+which-network-mac
 
